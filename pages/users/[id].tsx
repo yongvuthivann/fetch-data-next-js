@@ -9,7 +9,7 @@ type props = {
 function User({ user }: props) {
   return (
     <div>
-      <h1>{user?.username} Detail</h1>
+      <h1>{user?.username}'s Detail</h1>
     </div>
   );
 }
