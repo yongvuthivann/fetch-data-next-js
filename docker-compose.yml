@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  nextjs:
+    container_name: nextjs_container
+    restart: always
+    ports:
+      - 4001:4001
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/.next
+    env_file:
+      - .env.local
